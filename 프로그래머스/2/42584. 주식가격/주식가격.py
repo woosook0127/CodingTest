@@ -1,11 +1,11 @@
 def solution(prices):
     n = len(prices)
     answer = []
-    for i, p in enumerate(prices):
+    for i in range(n):
         cnt = 0
         flag = False
         for k in range(i+1, n):
-            if prices[k] >= p :
+            if prices[k] >= prices[i] :
                 cnt += 1
                 flag = True
             else:
